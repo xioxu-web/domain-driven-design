@@ -1,0 +1,10 @@
+nil!=in.req('message.body.extendInfo.externalUserId')&&string.length(in.req('message.body.extendInfo.externalUserId'))>0?string.replace_all(in.req('message.body.extendInfo.externalUserId'), mapField(tntInstId(), list('HLOPW300', 'HLOPW3PH', 'HLOPW3ID', 'HLOPW3MY', 'HLOPW3TH','HLOPW3VN'), list('LZD.SG.','LZD.PH.','LZD.ID.','LZD.MY.','LZD.TH.', 'LZD.VN.')),''):nil
+
+
+(stringUtil.isNotEmpty(in.req('message.body.extendInfo'))) ?
+dateUtil.getISODatetimeString(in.req('message.body.extendInfo>validTime'),
+in.req('message.body.extendInfo>validTime')) : nil
+
+INSERT INTO `bcm_secret_map` (`id`,`issuer`,`holder`,`key_type`,`scene`,`algorithm`,`tnt_inst_id`,`key_name`,`gmt_modified`,`gmt_create`,`secret_subject_id`) VALUES ('2018073117401001000000000013','GAGWW3SG','GAGWW3SG','PRIVATE','SIGN','RSA2','GAGWW3SG','gn-2UOG000000000003-rsa2048-private','2022-05-20 07:56:22','2022-05-20 07:24:02','2UOG000000000003');
+INSERT INTO `bcm_secret_map` (`id`,`issuer`,`holder`,`key_type`,`scene`,`algorithm`,`tnt_inst_id`,`key_name`,`gmt_modified`,`gmt_create`,`secret_subject_id`) VALUES ('2018073117401001000000000014','2UOG000000000003','GAGWW3SG','PUBLIC','SIGN','RSA2','GAGWW3SG','cn-2UOG000000000003-rsa2048-public','2022-05-20 07:25:33','2022-05-20 07:25:33','2UOG000000000003');
+INSERT INTO `bcm_secret_map` (`id`,`issuer`,`holder`,`key_type`,`scene`,`algorithm`,`tnt_inst_id`,`key_name`,`gmt_modified`,`gmt_create`,`secret_subject_id`) VALUES ('2018073117401001000000000015','GAGWW3SG','2UOG000000000003','PUBLIC','SIGN','RSA2','GAGWW3SG','gn-2UOG000000000003-rsa2048-public','2022-05-20 07:26:46','2022-05-20 07:26:46','2UOG000000000003');
